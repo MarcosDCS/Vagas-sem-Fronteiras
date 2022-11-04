@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="pagamento.css">
+    <script src="https://kit.fontawesome.com/efc5acbe5d.js" crossorigin="anonymous" defer></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="#" class="dados">
+        <header>
+            <h1>Dados cadastrais</h1>
+        </header>
+        <div class="radio-pais">
+            <input type="radio" name="radio" id="s1">
+            <label for="s1">Brasileiro</label>
+            <input type="radio" name="radio" id="s2">
+            <label for="s2">Estrangeiro</label>
+        </div>
+        <div class="inputs-conteiner">
+            <div class="input-box">
+                <input type="text" required="required">
+                <span>Nome completo</span>
+                <i></i>
+            </div>
+            <div class="input-box">           
+                <input type="email" required="required">
+                <span>E-mail</span>
+                <i></i>
+            </div>
+            
+            <div class="bottom">
+                <div class="input-box">
+                    <input type="text" required="required" id="telefone">
+                    <span>Celular com DDD</span>
+                    <i></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" required="required" id="cpf" >
+                    <span>CPF</span>
+                    <i></i>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+    <form action="#" class="metod">
+        <header><h1>Método de Pagamento</h1></header>
+        <div class="img">
+            <div class="visa">
+                <img id="visa" src=    "img-pagamento/visa.png" alt="">
+            </div>
+            <div class="master">
+                <img id="master" src=  "img-pagamento/master.png" alt="">
+            </div>
+
+            <div class="american">
+                <img id="american" src="img-pagamento/american.png" alt="">
+            </div>
+
+            <div class="dinner">
+                <img id="dinner" src="img-pagamento/dinn.png" alt="">
+            </div>
+
+            <div class="elo">
+                <img id="elo" src="img-pagamento/hyper.png" alt="">
+            </div>
+
+            <div class="hyper">
+                <img id="hyper" src="img-pagamento/elo.png" alt="">
+            </div>
+
+            <div class="boleto">
+                <img id="boleto" src="img-pagamento/leto.png" alt="">
+            </div>
+        </div>
+       
+            <div class="input-box">
+                <input type="text" required="required" id="cartao">
+                <span>Número do cartão</span>
+                <i></i>
+            </div>
+            <div class="input-box">
+                <input type="text" required="required">
+                <span>Seu Nome impresso no cartão</span>
+                <i></i>
+            </div>
+
+            
+            <div class="data">
+                <h3>Validade</h3>
+                <select name="" required="required" id="mes">
+                    <option value="mes" selected disabled>Mês</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+              
+           
+
+               
+                <select name="" required="required" id="ano">
+                    <option value="ano" selected disabled>Ano</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                    <option value="2033">2033</option>
+                </select>           
+            
+            </div>
+            <div class="input-box">
+                <input type="text" required="required">
+                <span>Digite o CVV/Código de segurança</span>
+                <i></i>
+            </div>
+
+            <div class="parcel">
+                <h3>Parcelameto</h3>
+                <select name="" required="required" id="parcel">
+                    <option value="parcelameto">Parcelameto</option>
+                    <option value="1x">1x de</option>
+                    <option value="2x">2x de</option>
+                    <option value="4x">4x de</option>
+                </select>   
+            </div>
+              <a href="#">Possui cupom de desconto? Clique aqui</a>
+
+             <button value="submit">Comprar Agora</button>
+        </div>
+    </form>
+    <script>
+        $("#telefone").mask("(99)99999-9999")
+    </script>
+    <script>
+         $("#cpf").mask("999.999.999-99")
+    </script>
+    <script>
+        $("#cartao").mask("9999-9999-9999-9999")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; 
+}
+::-ms-reveal {
+    display: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+.conteiner{
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+.form-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D66A5E;
+    padding: 1rem;
+}
+.form-img img{
+    width: 31rem;
+}
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.logo img{
+    margin: auto;
+    width: 3rem;
+    padding: 0;
+}
+form h1{
+    text-align: center;
+    margin-top: 5%;
+    color: #D66A5E;
+    font-weight: 600;
+}
+.input-box{
+    position: relative;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.input-box input:valid ~ .eye,
+.input-box input:focus ~ .eye{
+    font-size: 20px;
+}
+.eye{
+    position: absolute;
+    top: 10px;
+    left: 250px;
+    font-size: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    color: #f2f2f2;
+}
+#eye{
+    display: none;
+}
+.input-box input{
+    position: relative;
+    width: 100%;
+    padding: 10px 5px 5px;
+    background: transparent;
+    justify-content: center;
+    border: none;
+    outline: none;
+    color: #f2f2f2;
+    font-size: 1em;
+    letter-spacing: .05em;
+    z-index: 10;
+}
+.input-box span{
+    position: absolute;
+    left: 0;
+    padding: 10px 5px 5px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: .05px;
+    transition: .5s;
+}
+.input-box input:valid ~ span,
+.input-box input:focus ~ span{
+    color: #D66A5E;
+    transform: translateY(-34px);
+    font-size: .75em;
+}
+.input-box i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #D66A5E;
+    border-radius: 4px;
+    pointer-events: none;
+    transition: .5s;
+    z-index: 9;
+}
+.input-box input:valid ~ i,
+.input-box input:focus ~ i{
+    height: 44px;
+}
+
+
+.password-infos {
+    width: 90%;
+    margin-top: 3%;
+    margin-left: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.password-infos a {
+
+    transition: 0.2s ease-in-out;
+}
+.password-infos a:hover{
+    color: #555555;   
+}
+button {
+    background-color: #D66A5E;
+    color: #fff;
+    width: 90%;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    margin-left: 4%;
+    border-radius: 12px;
+    margin-top: 10%;
+    font-size: 1.6em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+button:hover {
+    background-color:#e05a4b ; 
+}
+.links-conteiner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+.links-conteiner span {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.links-conteiner aside {
+    margin-top: 5%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.links-conteiner aside i {
+    font-size: 1.6em;
+    background-color: #D66A5E;
+    padding:  8px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    color: #f2f2f2;
+    margin: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links-conteiner aside i:hover{
+    font-size: 1.9em;
+    background-color: #e05a4b;
+    opacity: .9;
+}
+form footer{
+    width: 100%;
+    margin-top: 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form footer hr{
+    width: 100%;
+    height: 3px;
+    background-color: #555;
+}
+form footer span{
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 5%;
+}
+form footer a{
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+
+}
+form footer a:hover{
+    color: #555555;
+}
+@media (max-width:900px) {
+    .form-img{
+        display: none;
+    }
+    .conteiner{
+        width: 70%;
+    }
+    .form{
+        width: 100%;
+    }
+    body{
+        background:  #D66A5E;
+    }
+}
